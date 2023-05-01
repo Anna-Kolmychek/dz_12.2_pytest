@@ -9,6 +9,9 @@ def get_val(collection: dict, key, default='git'):
     :return: значение в словаре по ключу
     """
 
+    if not isinstance(collection, dict):
+        return default
+
     if key in collection.keys():
         return collection[key]
 
